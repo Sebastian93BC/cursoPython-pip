@@ -19,12 +19,12 @@ def run():
 
   data = read_csv.read_csv('data.csv')
   country = input('Type Country => ')
-  print(country)
+  print(country)  # devuelve la información del país en formato diccionario
 
   result = utils.population_by_country(data, country)
 
   if len(result) > 0:
-    country = result[0]
+    country = result[0] #devuelve el nombre del pais
     print(country)
     labels, values = utils.get_population(country)
     charts.generate_bar_chart(country['Country'], labels, values)
